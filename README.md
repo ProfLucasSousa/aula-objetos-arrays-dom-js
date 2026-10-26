@@ -136,7 +136,59 @@ produtos.forEach((produto) => {
 
 ---
 
-## 5. DOM: exibindo informações no HTML
+---
+
+## 5. Classes em JavaScript usando `constructor`
+
+Uma classe funciona como um modelo para criar objetos com as mesmas propriedades e comportamentos.
+
+Por exemplo, podemos criar uma classe `Pessoa` com nome, idade e um método de apresentação:
+
+```js
+class Pessoa {
+  constructor(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+  }
+
+  apresentar() {
+    console.log(`Olá, meu nome é ${this.nome} e tenho ${this.idade} anos.`);
+  }
+}
+
+const pessoa1 = new Pessoa("João", 25);
+pessoa1.apresentar();
+```
+
+Resultado esperado:
+
+```txt
+Olá, meu nome é João e tenho 25 anos.
+```
+
+### Entendendo o código
+
+- `class Pessoa`: define uma classe chamada `Pessoa`.
+- `constructor(nome, idade)`: é executado automaticamente ao criar um objeto com `new` e recebe os valores iniciais.
+- `this.nome = nome` e `this.idade = idade`: guardam esses valores nas propriedades do objeto criado.
+- `apresentar()`: é um método, ou seja, uma função definida dentro da classe.
+- `new Pessoa("João", 25)`: cria uma instância (um objeto) da classe `Pessoa`.
+
+O `constructor` permite inicializar as propriedades de cada objeto quando ele é criado.
+
+Podemos criar outra pessoa usando a mesma classe:
+
+```js
+const pessoa2 = new Pessoa("Maria", 30);
+
+console.log(pessoa2.nome); // Maria
+console.log(pessoa2.idade); // 30
+pessoa2.apresentar(); // Olá, meu nome é Maria e tenho 30 anos.
+```
+
+---
+
+## 6. DOM: exibindo informações no HTML
 
 O DOM permite que o JavaScript acesse e altere elementos da página HTML.
 
@@ -161,7 +213,7 @@ listaProdutos.innerHTML = "Produto cadastrado com sucesso!";
 
 ---
 
-## 6. Exemplo prático completo
+## 7. Exemplo prático completo
 
 Crie os arquivos abaixo:
 
@@ -231,7 +283,7 @@ produtos.forEach((produto) => {
 
 ---
 
-## 7. Melhorando a exibição com CSS simples
+## 8. Melhorando a exibição com CSS simples
 
 Atualize o `index.html`:
 
@@ -320,7 +372,7 @@ produtos.forEach((produto) => {
 
 ---
 
-## 8. Atividade prática
+## 9. Atividade prática
 
 Crie uma página que exiba uma lista de alunos.
 
@@ -360,7 +412,7 @@ A página deve mostrar cada aluno em um card.
 
 ---
 
-## 9. Desafio extra
+## 10. Desafio extra
 
 Mostre uma mensagem diferente de acordo com a nota do aluno:
 
@@ -377,7 +429,7 @@ Depois exiba essa situação dentro do card.
 
 ---
 
-## 10. Código base para o desafio
+## 11. Código base para o desafio
 
 ```js
 const alunos = [
@@ -426,7 +478,7 @@ alunos.forEach((aluno) => {
 
 ---
 
-## 11. Fechamento prático
+## 12. Fechamento prático
 
 Nesta aula, usamos:
 
@@ -455,53 +507,3 @@ elemento.innerHTML += "conteúdo";
 Esses recursos aparecem o tempo todo em projetos reais com JavaScript.
 
 Quem entende isso, já começa a sair do JavaScript decorado e entra no JavaScript usado de verdade.
-
----
-
-## 12. Classes em JavaScript usando `constructor`
-
-Uma classe funciona como um modelo para criar objetos com as mesmas propriedades e comportamentos.
-
-Por exemplo, podemos criar uma classe `Pessoa` com nome, idade e um método de apresentação:
-
-```js
-class Pessoa {
-  constructor(nome, idade) {
-    this.nome = nome;
-    this.idade = idade;
-  }
-
-  apresentar() {
-    console.log(`Olá, meu nome é ${this.nome} e tenho ${this.idade} anos.`);
-  }
-}
-
-const pessoa1 = new Pessoa("João", 25);
-pessoa1.apresentar();
-```
-
-Resultado esperado:
-
-```txt
-Olá, meu nome é João e tenho 25 anos.
-```
-
-### Entendendo o código
-
-- `class Pessoa`: define uma classe chamada `Pessoa`.
-- `constructor(nome, idade)`: é executado automaticamente ao criar um objeto com `new` e recebe os valores iniciais.
-- `this.nome = nome` e `this.idade = idade`: guardam esses valores nas propriedades do objeto criado.
-- `apresentar()`: é um método, ou seja, uma função definida dentro da classe.
-- `new Pessoa("João", 25)`: cria uma instância (um objeto) da classe `Pessoa`.
-
-O `constructor` permite inicializar as propriedades de cada objeto quando ele é criado.
-
-Podemos criar outra pessoa usando a mesma classe:
-
-```js
-const pessoa2 = new Pessoa("Maria", 30);
-
-console.log(pessoa2.nome); // Maria
-console.log(pessoa2.idade); // 30
-pessoa2.apresentar(); // Olá, meu nome é Maria e tenho 30 anos.
-```
